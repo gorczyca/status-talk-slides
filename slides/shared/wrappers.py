@@ -1,10 +1,13 @@
+from pathlib import Path
 from manim import *
 
 from slides.shared.common import labeled_node, edge_between, FONT_SIZE_TEXT
 
 from slides.shared.colors import HIGH_COLOR, GREEN_PASTEL, D_BLUE, LAT_ORANGE
 
-TEX_TEMPLATE_LOC = 'assets/preamble.tex'
+# Get project root (two levels up from this file: shared -> slides -> project)
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+TEX_TEMPLATE_LOC = _PROJECT_ROOT / 'assets' / 'preamble.tex'
 FONT = 'Noto Sans'
 
 

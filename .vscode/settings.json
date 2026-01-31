@@ -1,0 +1,8 @@
+{
+    "manim-sideview.defaultManimPath": "/home/piotr/Dresden/piotr-gorczyca-status-talk/.venv/bin/manim",
+    "manim-sideview.preview": true,
+        "python.defaultInterpreterPath": "/home/piotr/Dresden/piotr-gorczyca-status-talk/.venv/bin/python",
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}"
+    }
+}

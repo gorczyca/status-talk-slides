@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: piotr-gorczyca-status-talk
+Version: 0.1.0
+Summary: Manim slides for status talk
+Requires-Python: >=3.10
