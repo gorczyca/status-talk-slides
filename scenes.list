@@ -1,0 +1,16 @@
+# scenes.list  (one per line: <file> <SceneClass>)
+slides/title.py TitleScene
+slides/s01_two_perspectives.py S01TwoPerspectivesScene
+slides/s02_bias.py S02BiasScene
+slides/s03_advancing.py S03AdvancingScene
+slides/s04_af_code.py S04AfCodeScene
+slides/s05_aba_framework.py S05AbaFrameworkScene
+slides/s06_aba_arguments.py S06AbaArgumentsScene
+slides/s07_aba_code.py S07AbaCodeScene
+slides/s08_aba_dispute.py S08AbaDisputeScene
+slides/s09_evaluation_setup.py S09EvaluationSetupScene
+slides/s10_evaluation1.py S10Evaluation1Scene
+slides/s11_evaluation2.py S11Evaluation2Scene
+slides/s12_conclusion.py S12ConclusionScene
+slides/s13_extra.py S13ExtraScene
+slides/s14_extra_vis.py S14ExtraVisScene

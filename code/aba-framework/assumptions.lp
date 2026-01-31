@@ -1,0 +1,2 @@
+assumption(b).                                           
+assumption(d).                                           
