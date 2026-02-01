@@ -41,7 +41,7 @@ class Title(BaseSlide):
 
 
         authors = TexWrapper(r'\raggedright  Piotr Gorczyca \\ Computational Logic Group, TU Dresden', color=WHITE, font_size=32).next_to(title, DOWN, aligned_edge=LEFT, buff=0.3)
-        venue_and_date = TexWrapper(r'\raggedright Dresden, 5th January 2026', color=WHITE, font_size=32).next_to(authors, DOWN, aligned_edge=LEFT, buff=0)
+        venue_and_date = TexWrapper(r'\raggedright Dresden, February 5th 2026', color=WHITE, font_size=32).next_to(authors, DOWN, aligned_edge=LEFT, buff=0)
 
         # images
         buff = 1

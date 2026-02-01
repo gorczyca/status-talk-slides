@@ -2,7 +2,7 @@ from manim import *
 from manim_slides import Slide
 import numpy as np
 
-from shared.wrappers import *
+from slides.shared.wrappers import *
 
 
 def fixed_arrow(a, b, tip_h=0.2, tip_w=0.16, stroke=2, color=BLACK):
@@ -23,25 +23,25 @@ class BlockDiagram(VGroup):
         GGRAY = '#dddddd'
 
         def box(txt, w, h):
-            return RoundedRectangle(0.15, width=w, height=h, color=box_color)\
+            return Rectangle(width=w, height=h, color=box_color)\
                 .set_fill(color=[WHITE, GGRAY], opacity=0.5).set_stroke(width=2)\
                 .add(TexWrapper(txt, font_size=font_size).set_z_index(99))
 
-        first = box(r'ground \texttt{base.}\\set \texttt{t:=0}', 1.5, 0.6)
+        first = box(r'\texttt{t:=0}', 1.5, 0.6)
         second = box(r'ground \texttt{updateState(t).}', 2.5, 0.45).next_to(first, DOWN, buff=buff)
         third = RegularPolygon(4, color=box_color).scale([0.6, 1.3, 1]).rotate(PI/2)\
             .set_fill(color=[WHITE, GGRAY], opacity=0.5).set_stroke(width=2)\
-            .add(TexWrapper(r'\texttt{:- not end(p,t).} SAT?', font_size=font_size).set_z_index(99))\
+            .add(TexWrapper(r'\texttt{:- not pWin(t).} SAT?', font_size=font_size).set_z_index(99))\
             .next_to(second, DOWN, buff=buff)
         third_yes = Circle(radius=.25, color=box_color).set_fill(color=[WHITE, GGRAY], opacity=0.5)\
             .set_stroke(width=2).add(TexWrapper(r'YES', font_size=font_size)).next_to(third, RIGHT, buff=1)
         fourth = RegularPolygon(4, color=box_color).set_fill(color=[WHITE, GGRAY], opacity=0.5)\
             .scale([0.6, 1.3, 1]).rotate(PI/2).set_stroke(width=2)\
-            .add(TexWrapper(r'\texttt{:- end(o,t).} UNSAT?', font_size=font_size).set_z_index(99))\
+            .add(TexWrapper(r'\texttt{:- oWin(t).} UNSAT?', font_size=font_size).set_z_index(99))\
             .next_to(third, DOWN, buff=buff)
         fourth_yes = Circle(radius=.25, color=box_color).set_fill(color=[WHITE, GGRAY], opacity=0.5)\
             .set_stroke(width=2).add(TexWrapper(r'NO', font_size=font_size)).next_to(fourth, RIGHT, buff=1)
-        fifth = box(r'\texttt{t:=t+1}\\ground \texttt{step(t).}', 1.8, 0.6).next_to(fourth, DOWN, buff=buff)
+        fifth = box(r'\texttt{t:=t+1}', 1.8, 0.6).next_to(fourth, DOWN, buff=buff)
 
         for m in [first, second, third, third_yes, fourth, fourth_yes, fifth]:
             m.set_z_index(1)

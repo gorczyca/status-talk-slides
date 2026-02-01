@@ -1,0 +1,93 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/S01TwoPerspectivesScene/9299aa2eedd1e8960c23c52cbd37fc19fdfeb1a22dac491f20296fae4ae15627.mp4",
+      "rev_file": "slides/files/S01TwoPerspectivesScene/9299aa2eedd1e8960c23c52cbd37fc19fdfeb1a22dac491f20296fae4ae15627_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/S01TwoPerspectivesScene/29e1361f0f72c5e8439eea53178052252e7c9d2c81df711c0993b41e094d3c75.mp4",
+      "rev_file": "slides/files/S01TwoPerspectivesScene/29e1361f0f72c5e8439eea53178052252e7c9d2c81df711c0993b41e094d3c75_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/S01TwoPerspectivesScene/409096e92d1246356cd6cce8b2507ee30f3e51e8dde1f5a2f8a44fa9db45c6c7.mp4",
+      "rev_file": "slides/files/S01TwoPerspectivesScene/409096e92d1246356cd6cce8b2507ee30f3e51e8dde1f5a2f8a44fa9db45c6c7_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/S01TwoPerspectivesScene/ce5c3f5a9b508e014eb7c53259009dbcbc1185dbb19fe945b826238c13a96031.mp4",
+      "rev_file": "slides/files/S01TwoPerspectivesScene/ce5c3f5a9b508e014eb7c53259009dbcbc1185dbb19fe945b826238c13a96031_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/S01TwoPerspectivesScene/e43071f58fcad9948bedb3229e7870165833d3efdce9aa6557b25a2cc14de042.mp4",
+      "rev_file": "slides/files/S01TwoPerspectivesScene/e43071f58fcad9948bedb3229e7870165833d3efdce9aa6557b25a2cc14de042_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/S01TwoPerspectivesScene/19496482e34a746bc61dec4a92f770c97aaf8f9d4267396f710ca7577a9c81c8.mp4",
+      "rev_file": "slides/files/S01TwoPerspectivesScene/19496482e34a746bc61dec4a92f770c97aaf8f9d4267396f710ca7577a9c81c8_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/S01TwoPerspectivesScene/95fd0c34ffeff4376d1ecd565a273b6799cec7244f95dd13b2e6849a2f040db2.mp4",
+      "rev_file": "slides/files/S01TwoPerspectivesScene/95fd0c34ffeff4376d1ecd565a273b6799cec7244f95dd13b2e6849a2f040db2_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    854,
+    480
+  ],
+  "background_color": "white"
+}

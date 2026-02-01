@@ -23,6 +23,7 @@ class S01TwoPerspectives(BaseSlide):
     def create_content(self):
         s = self.slide
 
+
         m_types_text = TexWrapper(r'Model types:', font_size=FONT_SIZE_TEXT).to_edge(LEFT).shift(UP*2+RIGHT*.25)
 
         items = [
