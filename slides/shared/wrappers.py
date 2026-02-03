@@ -97,6 +97,7 @@ class TableWrapper(Table):
                 rf"\raggedright\parbox[t]{{{max_width}cm}}{{{text}}}",
                 font_size=font_size,
                 color=color,
+                tex_template=get_tex_template(),
             )
 
         kwargs.setdefault("element_to_mobject", to_mobj)

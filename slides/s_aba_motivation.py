@@ -12,7 +12,7 @@ SLIDE_NO = 1
 
 
 class SAbaMotivation(BaseSlide):
-    TITLE = r'(Structured) Argumentation Games: Motivation'
+    TITLE = r'(Structured) Argumentation Games'
 
     def create_content(self):
         s = self.slide

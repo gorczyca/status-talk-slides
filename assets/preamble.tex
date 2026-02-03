@@ -45,3 +45,90 @@
 
 % \newcommand{\fr}{\ensuremath{\frF = \frTup}\xspace}
 
+
+
+\newcommand{\Stands}{\mathcal{S}}
+\newcommand{\spform}[1]{\mathsf{#1}}
+\newcommand{\standb}[1]{\mathord{\mathop{\Box}\nolimits_{\spform{#1}}}}
+\newcommand{\standd}[1]{\mathord{\mathop{\Diamond}\nolimits_{\spform{#1}}}}
+\newcommand{\standbs}{\standb{s}}
+
+\newcommand{\sharpens}{\preccurlyeq}
+
+\newcommand{\Precs}{\Pi}
+\newcommand{\stan}{\sigma}
+\newcommand{\eval}{\gamma}
+\newcommand{\Atoms}{\mathcal{A}}
+\newcommand{\pr}{\pi}
+% \newcommand{\default}[3]{{\mathit{#1}\mathbin{:}\mathit{#2}{/}\mathit{#3}}}
+\newcommand{\default}[3]{\frac{\mathit{#1}\mathbin{:}\mathit{#2}}{\mathit{#3}}}
+\newcommand{\know}{\mathord{\mathbf{K}}}
+\newcommand{\ebnfeq}{\mathrel{::=}}
+\newcommand{\ebnfalt}{\mathbin{\mid}}
+\newcommand{\wf}{V}
+\newcommand{\ws}{W}
+\newcommand{\wt}{X}
+\newcommand{\wm}{\xi}
+
+\newcommand{\SFstruct}{\tuple{\ws,\wmv}}
+\newcommand{\SFFstruct}{\tuple{\wf,\ws,\wm}}
+
+\newcommand{\sff}{S4F\xspace}
+
+\newcommand{\sfstruct}{\mathcal{K}}
+\newcommand{\sffstruct}{\mathcal{M}}
+\newcommand{\modelfor}{\Vdash}
+\newcommand{\nmodelfor}{\nVdash}
+\newcommand{\iffdef}{\mathbin{\;:\mkern-7mu\iff\;}}
+
+\newcommand{\sstruct}{\mathcal{M}}
+\newcommand{\sstructn}[1]{\mathcal{M}_{#1}}
+\newcommand{\Sstruct}{\tuple{\Precs,\stan,\eval}}
+
+\newcommand{\atom}[1]{\ensuremath{\mathtt{#1}}}
+
+\newcommand{\atomp}{\atom{P}}
+\newcommand{\atomc}{\atom{C}}
+\newcommand{\atoma}{\atom{A}}
+\newcommand{\atomy}{\atom{Y}}
+\newcommand{\atomx}{\atom{X}}
+\newcommand{\atomb}{\atom{B}}
+
+\newcommand{\snih}{\spform{S1}}
+\newcommand{\srot}{\spform{S2}}
+\newcommand{\saes}{\spform{S3}}
+
+\newcommand{\sone}{\spform{S1}}
+\newcommand{\stwo}{\spform{S2}}
+\newcommand{\sthree}{\spform{S3}}
+
+\newcommand{\sffsstruct}{\mathfrak{F}}
+\newcommand{\stani}{\stan}
+\newcommand{\stano}{\tau}
+\newcommand{\SFFSstruct}{\tuple{\Precs,\stani,\stano,\eval}}
+
+\newcommand{\sts}{\spform{s}}
+\newcommand{\stt}{\spform{t}}
+\newcommand{\stu}{\spform{u}}
+\newcommand{\str}{\spform{r}}
+
+\newcommand{\spref}{\vartriangleleft}
+\newcommand{\all}{\ast}
+
+\newcommand{\partnk}{\Phi}
+\newcommand{\partk}{\Psi}
+\newcommand{\thr}{T}
+\newcommand{\modalsub}[1][\thr]{#1^{\Box}}
+% \newcommand{\partition}[1][\varphi]{\Xi(#1)}
+\newcommand{\partition}[1][T]{\Xi(#1)}
+\newcommand{\Partition}[1][]{\tuple{\partnk#1,\partk#1}}
+\newcommand{\Partitiont}{\Partition[']}
+\newcommand{\partprop}[1][\sts]{\Theta_{#1}}
+\newcommand{\sffsstructpartition}[1][\partition]{\sffsstruct_{#1}}
+
+%% Standpoint logic
+\newcommand{\lang}{\mathcal{L}}
+\newcommand{\slogic}{\ensuremath{\mathbb{S}}\xspace}
+\newcommand{\langs}{\lang_\slogic} % standpoint logic, formulas only
+\newcommand{\langss}{\langs^{\scalebox{0.666}{\ensuremath{\mathord{\sharpens}}}}} % standpoint logic *with* sharpening statements
+

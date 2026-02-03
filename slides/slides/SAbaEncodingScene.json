@@ -1,0 +1,69 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SAbaEncodingScene/1468459e05e39c3f89fa329efd669376c1ecfd188e94b5b6f99e1225ff80d049.mp4",
+      "rev_file": "slides/files/SAbaEncodingScene/1468459e05e39c3f89fa329efd669376c1ecfd188e94b5b6f99e1225ff80d049_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SAbaEncodingScene/141f6296aecc9c6333426f4a854f841df7aa2fbedd8b9d40282ef7b6fc77ffad.mp4",
+      "rev_file": "slides/files/SAbaEncodingScene/141f6296aecc9c6333426f4a854f841df7aa2fbedd8b9d40282ef7b6fc77ffad_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SAbaEncodingScene/bddfdf75321108dc1cd277be5bb0a84aae76880838c24978708d29a59d726722.mp4",
+      "rev_file": "slides/files/SAbaEncodingScene/bddfdf75321108dc1cd277be5bb0a84aae76880838c24978708d29a59d726722_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SAbaEncodingScene/ec76c80d98cb737dba6287a607e0ae5485922deb7343183e98a404a7ec5a165f.mp4",
+      "rev_file": "slides/files/SAbaEncodingScene/ec76c80d98cb737dba6287a607e0ae5485922deb7343183e98a404a7ec5a165f_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SAbaEncodingScene/6281d807b634bb5b8f19d06df6ca63f67da17c8c8bbdfda300fdddf0150c46d6.mp4",
+      "rev_file": "slides/files/SAbaEncodingScene/6281d807b634bb5b8f19d06df6ca63f67da17c8c8bbdfda300fdddf0150c46d6_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    854,
+    480
+  ],
+  "background_color": "white"
+}

@@ -44,3 +44,18 @@ pdf:
 
 # merge to html
 # PYTHONPATH=. manim-slides SemTitleScene SemInitialScene SemMotivationScene SemCurrentPracticesScene SemRiskmanMethodScene SemGraphEncodingScene SemEncRules1Scene SemEncRules2Scene SemEncRules3Scene SemReasoningValidationScene SemMoreShaclScene SemRiskmanStatsScene SemHumanReadabilityScene SemVideoScene SemConclusionScene
+
+# Deploy to GitHub Pages (uploads docs/ folder)
+.PHONY: deploy
+deploy:
+	@echo "Deploying slides to GitHub Pages..."
+	touch docs/.nojekyll
+	@changes=$$(git status --porcelain docs); \
+	if [ -z "$$changes" ]; then \
+		echo "No changes in docs/ to deploy; skipping commit."; \
+	else \
+		git add docs/ && \
+		git commit -m "Deploy slides to GitHub Pages" && \
+		git push && \
+		echo "Deployed! Check your GitHub Pages URL."; \
+	fi

@@ -51,7 +51,10 @@ class Title(BaseSlide):
         cl = ImageMobject(str(_PROJECT_ROOT / "img/logo/CLGroup-line-brillantblau.png")).scale_to_fit_width(3).next_to(iccl, RIGHT, buff=buff) 
             
 
-        supervision = TexWrapper(r'\raggedleft \textbf{Supervision:}\\Dr. habil. Hannes Strass\\Prof. Dr. Sebastian Rudolph\\\textbf{Fachrefent:} \\Prof. Dr. Markus Krötzsch', color=custom_colors.D_BLUE, font_size=32).to_corner(DR).shift(UP*0.2 + RIGHT *.25)
+        # supervision = TexWrapper(r'\raggedleft \textbf{Supervision:}\\Dr. habil. Hannes Strass\\Prof. Dr. Sebastian Rudolph\\\textbf{Fachrefent:} \\Prof. Dr. Markus Krötzsch', color=custom_colors.D_BLUE, font_size=32).to_corner(DR).shift(UP*0.2 + RIGHT *.25)
+        supervision = TexWrapper(r'\raggedleft \textbf{Supervision:}\\Dr. habil. Hannes Strass\\textbf{Fachrefent:} \\Prof. Dr. Markus Krötzsch')
+        
+        # \\Prof. Dr. Sebastian Rudolph\\\textbf{Fachrefent:} \\Prof. Dr. Markus Krötzsch', color=custom_colors.D_BLUE, font_size=32).to_corner(DR).shift(UP*0.2 + RIGHT *.25)
 
 
 
