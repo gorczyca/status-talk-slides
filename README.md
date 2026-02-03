@@ -1,5 +1,5 @@
 # View Live
-https://gorczyca.github.io/ms-dis-slides/  (F11 for fullscreen)
+https://gorczyca.github.io/status-talk-slides/  (F11 for fullscreen)
 
 ### Installation
 
