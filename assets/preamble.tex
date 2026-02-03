@@ -1,6 +1,8 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{xspace}
 
 \usepackage{lmodern}
 \usepackage{setspace}
@@ -21,6 +23,8 @@
 %  macros
 \newcommand{\test}{\ensuremath{\mathbb{R}}}
 \newcommand{\limplies}{\rightarrow}
+\newcommand{\limpliedby}{\leftarrow}
+\newcommand{\lpnot}{\mathop{\mathtt{not}}}
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -77,6 +81,7 @@
 
 \newcommand{\sfstruct}{\mathcal{K}}
 \newcommand{\sffstruct}{\mathcal{M}}
+\newcommand{\sffstructS}{\mathfrak{S}}
 \newcommand{\modelfor}{\Vdash}
 \newcommand{\nmodelfor}{\nVdash}
 \newcommand{\iffdef}{\mathbin{\;:\mkern-7mu\iff\;}}
@@ -128,6 +133,7 @@
 
 %% Standpoint logic
 \newcommand{\lang}{\mathcal{L}}
+\newcommand{\langk}{\lang_{\know}}
 \newcommand{\slogic}{\ensuremath{\mathbb{S}}\xspace}
 \newcommand{\langs}{\lang_\slogic} % standpoint logic, formulas only
 \newcommand{\langss}{\langs^{\scalebox{0.666}{\ensuremath{\mathord{\sharpens}}}}} % standpoint logic *with* sharpening statements

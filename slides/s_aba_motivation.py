@@ -8,7 +8,7 @@ from slides.shared.common import highlight_box
 
 from slides.shared.slide_count import SLIDES, SLIDES_NO
 
-SLIDE_NO = 1
+SLIDE_NO = 3
 
 
 class SAbaMotivation(BaseSlide):
@@ -51,13 +51,7 @@ class SAbaMotivation(BaseSlide):
         msg6 = make_bubble(r"Conclude $P$, if $A$, $B$ and assuming $Y$.", 3.8, align_left=True)
         msg7 = make_bubble(r"Conclude $\overline{Y}$ if $Y'$", 2, align_left=False)
         msg8 = make_bubble("...", .5, align_left=False)
-        # msg1 = make_bubble("Hey, how are you?", 2.2, align_left=True)
-        # msg1 = make_bubble("Hey, how are you?", 2.2, align_left=True)
-        # msg2 = make_bubble("I'm good, thanks!", 2.0, align_left=False)
-        # msg3 = make_bubble("What are you up to?", 2.3, align_left=True)
-        # msg4 = make_bubble("Working on slides", 2.1, align_left=False)
-        # msg5 = make_bubble("Nice!", 1.0, align_left=True)
-        # msg6 = make_bubble("Yeah it's fun", 1.8, align_left=False)
+
 
         # messages = VGroup(msg1, msg2, msg3, msg4, msg5, msg6)
         messages = VGroup(msg1, msg2, msg3, msg4, msg5, msg6, msg7, msg8)
@@ -93,10 +87,6 @@ class SAbaMotivation(BaseSlide):
             direction = LEFT if msg.align_left else RIGHT
             s.play(FadeIn(msg, shift=direction * 0.5), msg.animate.scale(1.05), run_time=0.3)
             s.play(msg.animate.scale(1/1.05), run_time=0.15)
-            s.wait(0.1)
-            s.next_slide()
-
-
 
 
 
@@ -220,37 +210,37 @@ class SAbaMotivation(BaseSlide):
         # main_prop_box = highlight_box(VGroup(f, s_node, d, a), fill_opacity=1, fill_color=PROP_COLOR, buff=0.3, dashed=False).set_z_index(0)
 
         # Create edges
-        edges = VGroup(
-            fixed_arrow_graph(p_node_1, p_node.get_left()+UP*0.1, color=BLACK),
-            fixed_arrow_graph(p_node_2, p_node.get_left()+DOWN*0.1, color=BLACK),
-            fixed_arrow_graph(a_node_1, p_node_1.get_left()+UP*0.1, color=BLACK),
-            fixed_arrow_graph(empty_a_1, a_node_1.get_left(), color=BLACK),
-            fixed_arrow_graph(b_node_1, p_node_1.get_left(), color=BLACK),
-            fixed_arrow_graph(empty_b_1, b_node_1.get_left(), color=BLACK),
-            fixed_arrow_graph(x_node_1, p_node_1.get_left()+DOWN*0.1, color=BLACK),
-            fixed_arrow_graph(a_node_2, p_node_2.get_left()+UP*0.1, color=BLACK),
-            fixed_arrow_graph(empty_a_2, a_node_2.get_left()+UP*0.0, color=BLACK),
-            fixed_arrow_graph(empty_b_2, b_node_2.get_left()+UP*0.0, color=BLACK),
-            fixed_arrow_graph(b_node_2, p_node_2.get_left(), color=BLACK),
-            fixed_arrow_graph(y_node_2, p_node_2.get_left()+DOWN*0.1, color=BLACK),
-            fixed_arrow_graph(neg_y_node, y_node_2.get_left()+DOWN*0.0, color=RED),
-            fixed_arrow_graph(neg_x_node, x_node_1.get_left()+DOWN*0.0, color=RED),
-            fixed_arrow_graph(y_p_node, neg_y_node.get_left()+DOWN*0.0+LEFT*0.2, color=BLACK),
-            fixed_arrow_graph(x_p_node, neg_x_node.get_left()+DOWN*0.0+LEFT*0.2, color=BLACK),
-            fixed_arrow_graph(empty_x_p, x_p_node.get_left()+DOWN*0.0, color=BLACK),
-            # fixed_arrow_graph(a, s_node.get_left()+DOWN*0.1, color=BLACK),
-            # fixed_arrow_graph(p, s_node.get_left(), color=BLACK),
-            # fixed_arrow_graph(e, xd.get_left(), color=BLACK),
-            # fixed_arrow_graph(xd, d.get_left(), color=RED),
-            # fixed_arrow_graph(b, xa.get_left()+UP*0.1, color=BLACK),
-            # fixed_arrow_graph(t, xa.get_left()+DOWN*0.1, color=BLACK),
-            # fixed_arrow_graph(xa, a.get_left(), color=RED),
-            # fixed_arrow_graph(c, t.get_left(), color=BLACK),
-            # fixed_arrow_graph(xe, e.get_left(), color=RED),
-            # fixed_arrow_graph(xc, p.get_left(), color=BLACK),
-            # curved_arrow(xc.get_bottom(), c.get_right()+0.1*DOWN+0.2*RIGHT, bend=1, color=RED),
-            # fixed_arrow_graph(f, xc.get_left(), color=BLACK),
-        )
+        # edges = VGroup(
+        #     fixed_arrow_graph(p_node_1, p_node.get_left()+UP*0.1, color=BLACK),
+        #     fixed_arrow_graph(p_node_2, p_node.get_left()+DOWN*0.1, color=BLACK),
+        #     fixed_arrow_graph(a_node_1, p_node_1.get_left()+UP*0.1, color=BLACK),
+        #     fixed_arrow_graph(empty_a_1, a_node_1.get_left(), color=BLACK),
+        #     fixed_arrow_graph(b_node_1, p_node_1.get_left(), color=BLACK),
+        #     fixed_arrow_graph(empty_b_1, b_node_1.get_left(), color=BLACK),
+        #     fixed_arrow_graph(x_node_1, p_node_1.get_left()+DOWN*0.1, color=BLACK),
+        #     fixed_arrow_graph(a_node_2, p_node_2.get_left()+UP*0.1, color=BLACK),
+        #     fixed_arrow_graph(empty_a_2, a_node_2.get_left()+UP*0.0, color=BLACK),
+        #     fixed_arrow_graph(empty_b_2, b_node_2.get_left()+UP*0.0, color=BLACK),
+        #     fixed_arrow_graph(b_node_2, p_node_2.get_left(), color=BLACK),
+        #     fixed_arrow_graph(y_node_2, p_node_2.get_left()+DOWN*0.1, color=BLACK),
+        #     fixed_arrow_graph(neg_y_node, y_node_2.get_left()+DOWN*0.0, color=RED),
+        #     fixed_arrow_graph(neg_x_node, x_node_1.get_left()+DOWN*0.0, color=RED),
+        #     fixed_arrow_graph(y_p_node, neg_y_node.get_left()+DOWN*0.0+LEFT*0.2, color=BLACK),
+        #     fixed_arrow_graph(x_p_node, neg_x_node.get_left()+DOWN*0.0+LEFT*0.2, color=BLACK),
+        #     fixed_arrow_graph(empty_x_p, x_p_node.get_left()+DOWN*0.0, color=BLACK),
+        #     # fixed_arrow_graph(a, s_node.get_left()+DOWN*0.1, color=BLACK),
+        #     # fixed_arrow_graph(p, s_node.get_left(), color=BLACK),
+        #     # fixed_arrow_graph(e, xd.get_left(), color=BLACK),
+        #     # fixed_arrow_graph(xd, d.get_left(), color=RED),
+        #     # fixed_arrow_graph(b, xa.get_left()+UP*0.1, color=BLACK),
+        #     # fixed_arrow_graph(t, xa.get_left()+DOWN*0.1, color=BLACK),
+        #     # fixed_arrow_graph(xa, a.get_left(), color=RED),
+        #     # fixed_arrow_graph(c, t.get_left(), color=BLACK),
+        #     # fixed_arrow_graph(xe, e.get_left(), color=RED),
+        #     # fixed_arrow_graph(xc, p.get_left(), color=BLACK),
+        #     # curved_arrow(xc.get_bottom(), c.get_right()+0.1*DOWN+0.2*RIGHT, bend=1, color=RED),
+        #     # fixed_arrow_graph(f, xc.get_left(), color=BLACK),
+        # )
         
 
 
@@ -259,8 +249,8 @@ class SAbaMotivation(BaseSlide):
         GRAPH_POS = RIGHT * 6.5 + DOWN * 0.25
 
         # Helper to scale and position a group
-        def prep(group):
-            return group.scale(SCALE).move_to(GRAPH_POS, aligned_edge=RIGHT)
+        # def prep(group):
+            # return group.scale(SCALE).move_to(GRAPH_POS, aligned_edge=RIGHT)
 
         # Create edges as needed (will be created inline during animation)
         edge_p1_to_p = fixed_arrow_graph(p_node_1, p_node.get_left()+UP*0.1, color=BLACK)
@@ -305,31 +295,45 @@ class SAbaMotivation(BaseSlide):
                 # Show messages explicitly
         show_msg(msg1)
 
+        s.wait()
+        s.next_slide()
 
         # Step 1: Show first argument (P <- A, B, X) with rule box
-        s.play(Create(VGroup(p_node, p1_arg_box, p_node_1, a_node_1, b_node_1,  x_node_1,
+        s.play(FadeIn(VGroup(p_node, p1_arg_box, p_node_1, a_node_1, b_node_1,  x_node_1,
                              edge_a1_to_p1, edge_b1_to_p1, edge_x1_to_p1, edge_p1_to_p)))
+        s.wait()
         s.next_slide()
 
         # Step 2: Show A supported by checkmark
         show_msg(msg2)
-        s.play(Create(VGroup(a1_arg_box, empty_a_1, edge_empty_a1)))
+        s.wait()
+        s.next_slide()
+        s.play(FadeIn(VGroup(a1_arg_box, empty_a_1, edge_empty_a1)))
+        s.wait()
         s.next_slide()
 
 
         show_msg(msg3)
-        s.play(Create(VGroup(b1_arg_box, empty_b_1, edge_empty_b1)))
+        s.wait()
+        s.next_slide()
+        s.play(FadeIn(VGroup(b1_arg_box, empty_b_1, edge_empty_b1)))
         s.play(DrawBorderThenFill(p1_arg_box_full))
+        s.wait()
         s.next_slide()
 
 
 
         show_msg(msg4)
-        s.play(Create(VGroup(neg_x1_rule_box, neg_x_node, x_p_node, edge_xp_to_negx, edge_neg_x_attack)))
+        s.wait()
+        s.next_slide()
+        s.play(FadeIn(VGroup(neg_x1_rule_box, neg_x_node, x_p_node, edge_xp_to_negx, edge_neg_x_attack)))
+        s.wait()
         s.next_slide()
 
         show_msg(msg5)
-        s.play(Create(VGroup(x_p_rule_box, empty_x_p, edge_empty_xp)))
+        s.wait()
+        s.next_slide()
+        s.play(FadeIn(VGroup(x_p_rule_box, empty_x_p, edge_empty_xp)))
         # Change first argument boxes to defeated (red)
         s.play(
             DrawBorderThenFill(neg_x1_box_full),
@@ -338,19 +342,29 @@ class SAbaMotivation(BaseSlide):
             a1_arg_box[0].animate.set_fill(DEFEAT_COLOR, opacity=1),
             b1_arg_box[0].animate.set_fill(DEFEAT_COLOR, opacity=1),
         )
+        s.wait()
         s.next_slide()
 
         show_msg(msg6)
 
+        s.wait()
+        s.next_slide()
 
-        s.play(Create(VGroup(p2_arg_box, p_node_2, a_node_2, b_node_2, y_node_2,
+
+        s.play(FadeIn(VGroup(p2_arg_box, p_node_2, a_node_2, b_node_2, y_node_2,
                              edge_a2_to_p2, edge_b2_to_p2, edge_y2_to_p2, a2_arg_box, empty_a_2, edge_empty_a2, b2_arg_box, empty_b_2, edge_empty_b2, p2_arg_box_full, edge_p2_to_p)))
 
+
+        s.wait()
+        s.next_slide()
         show_msg(msg7)
 
 
+        s.wait()
+        s.next_slide()
 
-        s.play(Create(VGroup(neg_y2_rule_box, neg_y_node, y_p_node, edge_yp_to_negy, edge_neg_y_attack)))
+        s.play(FadeIn(VGroup(neg_y2_rule_box, neg_y_node, y_p_node, edge_yp_to_negy, edge_neg_y_attack)))
+        s.wait()
         s.next_slide()
         show_msg(msg8)
 

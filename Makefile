@@ -1,7 +1,8 @@
 # Config
-MAIN_FILE := slide_deck.py
-MAIN_DECK := SlideDeck
 SLIDES_DIR := slides
+SHELL := /bin/bash
+# Strip inline comments and blank lines, then pick scene class (2nd column)
+SCENES := $(shell sed 's/#.*//' scenes.list | awk 'NF{print $$2}')
 
 # Default: build and serve full deck
 .PHONY: all
@@ -9,26 +10,31 @@ all: build serve
 
 .PHONY: build
 build:
-	manim $(MAIN_FILE) $(MAIN_DECK)
+	@set -e; \
+	sed 's/#.*//' scenes.list | awk 'NF{print $$1, $$2}' | \
+	while read -r file scene; do \
+		echo "Rendering $$scene from $$file"; \
+		PYTHONPATH=. manim -qh $$file $$scene; \
+	done
 
 .PHONY: serve
 serve:
-	manim-slides SlideDeck
+	PYTHONPATH=. manim-slides $(SCENES)
 
 .PHONY: html
 html:
-	manim-slides convert $(MAIN_DECK) $(MAIN_DECK).html
+	PYTHONPATH=. manim-slides convert $(SCENES) docs/index.html
 
 .PHONY: pdf
 pdf:
-	manim-slides convert $(MAIN_DECK) $(MAIN_DECK).pdf
+	PYTHONPATH=. manim-slides convert $(SCENES) docs/slides.pdf
 
 # Generic single slide build + show: underscore_case -> CamelCase
 # Single slide build + show
 .PHONY: %
 
 %:
-	PYTHONPATH=. manim $(SLIDES_DIR)/$@.py $(shell echo $@ | sed -r 's/(^|_)([a-z])/\U\2/g')Scene && manim-slides $(shell echo $@ | sed -r 's/(^|_)([a-z])/\U\2/g')Scene
+	PYTHONPATH=. manim -qh $(SLIDES_DIR)/$@.py $(shell echo $@ | sed -r 's/(^|_)([a-z])/\U\2/g')Scene && manim-slides $(shell echo $@ | sed -r 's/(^|_)([a-z])/\U\2/g')Scene
 
 
 # manim slides all

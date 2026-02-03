@@ -11,7 +11,7 @@ from slides.shared.slide_count import SLIDES, SLIDES_NO
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 # SLIDE_NO = SLIDES.index('Initial') + 1
-SLIDE_NO = 10
+SLIDE_NO = 9
 
 # 
 ASPFORABA_COLOR = '#2ca02c'

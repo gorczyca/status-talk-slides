@@ -1,0 +1,69 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SS4fNonmonScene/a8ee48e3a504470c6e5630a1e2faf1544bf958e7c8b40c492334139bd9392255.mp4",
+      "rev_file": "slides/files/SS4fNonmonScene/a8ee48e3a504470c6e5630a1e2faf1544bf958e7c8b40c492334139bd9392255_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SS4fNonmonScene/a71d35f9e08817e986cb9131587ebe6e79bb0737b946f06ba4af12c9b2490214.mp4",
+      "rev_file": "slides/files/SS4fNonmonScene/a71d35f9e08817e986cb9131587ebe6e79bb0737b946f06ba4af12c9b2490214_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SS4fNonmonScene/89a24917ac82be2278f3c5b516cf8dd4eff47961bdd17fe7fa9962030f063a12.mp4",
+      "rev_file": "slides/files/SS4fNonmonScene/89a24917ac82be2278f3c5b516cf8dd4eff47961bdd17fe7fa9962030f063a12_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SS4fNonmonScene/b4a51c7cde3a01ab07d7059e766e1cb8e3c509acd2b5c4deeff65c2104e52d39.mp4",
+      "rev_file": "slides/files/SS4fNonmonScene/b4a51c7cde3a01ab07d7059e766e1cb8e3c509acd2b5c4deeff65c2104e52d39_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SS4fNonmonScene/b377f25985b32aae569350a2cf8c757684be0aa8a9c29f8593cc5fa197f9e306.mp4",
+      "rev_file": "slides/files/SS4fNonmonScene/b377f25985b32aae569350a2cf8c757684be0aa8a9c29f8593cc5fa197f9e306_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    854,
+    480
+  ],
+  "background_color": "white"
+}

@@ -1,11 +1,21 @@
 # scenes.list  (one per line: <file> <SceneClass>)
-slides/title.py TitleScene
-slides/s_outline.py SOutlineScene
-slides/s_chapter_1.py SChapter1Scene
-slides/s_aba_motivation.py SAbaMotivationScene
-slides/s_aba_encoding.py SAbaEncodingScene
-slides/s_aba_control.py SAbaControlScene
-slides/s_aba_examples.py SAbaExamplesScene
-slides/s_aba_architecture.py SAbaArchitectureScene
-slides/s_aba_evaluation.py SAbaEvaluationScene
+slides/title.py TitleScene   # 
+slides/s_motivation.py SMotivationScene # 1
+slides/s_outline.py SOutlineScene  # 2
+slides/s_chapter_1.py SChapter1Scene #
+slides/s_aba_motivation.py SAbaMotivationScene # 3
+slides/s_aba_intro.py SAbaIntroScene # 4
+slides/s_aba_encoding.py SAbaEncodingScene # 5
+slides/s_aba_control.py SAbaControlScene # 6
+slides/s_aba_examples.py SAbaExamplesScene # 7
+slides/s_aba_architecture.py SAbaArchitectureScene # 8
+slides/s_aba_evaluation.py SAbaEvaluationScene # 9
 slides/s_chapter_2.py SChapter2Scene
+slides/s_s4f_background_logics.py SS4fBackgroundLogicsScene # 10
+slides/s_s4f_background_nonmon.py SS4fBackgroundNonmonScene # 11
+slides/s_s4f_approaches.py SS4FApproachesScene # 12
+slides/s_chapter_2a.py SChapter2aScene 
+slides/s_ss4f_syntax.py SS4fSyntaxScene # 13 
+slides/s_ss4f_nonmon.py SS4fNonmonScene # 14
+slides/s_ss4f_beyond.py SS4fBeyondScene # 15
+slides/s_chapter_2b.py SChapter2bScene 

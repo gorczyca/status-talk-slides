@@ -312,3 +312,36 @@ def enum_line(num, text, width=WIDTH, font_size=FONT_SIZE_TEXT):
     )
     body.next_to(label, RIGHT, aligned_edge=UP, buff=0.25) #.shift(UP*0.1)
     return VGroup(label, body).align_to(label, LEFT)
+
+
+def latex_block(
+    body,
+    color,
+    body_font_size=26,
+    padding=0.25,
+    corner_radius=0.0,
+    min_width=None,
+):
+    body_tex = TexWrapper(
+        body,
+        font_size=body_font_size,
+        color=BLACK,
+    )
+
+    # enforce minimal background width if requested
+    width = body_tex.width + 2 * padding
+    if min_width is not None:
+        width = max(width, min_width)
+
+    bg = RoundedRectangle(
+        width=width,
+        height=body_tex.height + 2 * padding,
+        corner_radius=corner_radius,
+        stroke_color=color,
+        stroke_width=2,
+        fill_color=color,
+        fill_opacity=0.15,
+    )
+    body_tex.move_to(bg.get_center()).align_to(bg, LEFT).shift(RIGHT * padding)
+
+    return VGroup(bg, body_tex)

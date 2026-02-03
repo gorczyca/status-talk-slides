@@ -52,7 +52,7 @@ class Title(BaseSlide):
             
 
         # supervision = TexWrapper(r'\raggedleft \textbf{Supervision:}\\Dr. habil. Hannes Strass\\Prof. Dr. Sebastian Rudolph\\\textbf{Fachrefent:} \\Prof. Dr. Markus Krötzsch', color=custom_colors.D_BLUE, font_size=32).to_corner(DR).shift(UP*0.2 + RIGHT *.25)
-        supervision = TexWrapper(r'\raggedleft \textbf{Supervision:}\\Dr. habil. Hannes Strass\\textbf{Fachrefent:} \\Prof. Dr. Markus Krötzsch')
+        supervision = TexWrapper(r'\raggedleft \textbf{Supervisor:}\\Dr. habil. Hannes Strass\\\textbf{Fachrefent:} \\Prof. Dr. Markus Krötzsch').to_corner(DR).shift(UP*0.2 + RIGHT *.25)
         
         # \\Prof. Dr. Sebastian Rudolph\\\textbf{Fachrefent:} \\Prof. Dr. Markus Krötzsch', color=custom_colors.D_BLUE, font_size=32).to_corner(DR).shift(UP*0.2 + RIGHT *.25)
 

@@ -12,7 +12,7 @@ from slides.shared.slide_count import SLIDES, SLIDES_NO
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-SLIDE_NO = 1
+SLIDE_NO = 7
 
 # Colors for ABA dispute
 PROP_COLOR = ["#E8FFE8", "#B5FFB5"]

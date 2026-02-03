@@ -12,7 +12,7 @@ from slides.shared.slide_count import SLIDES, SLIDES_NO
 
 set_asp_lexer()
 
-SLIDE_NO = 1
+SLIDE_NO = 6
 
 WIDTH = 13
 BUFF=1.5
@@ -138,6 +138,8 @@ class SAbaControl(BaseSlide):
         s.add(tree_group)
 
         # Add ASP code listing above the tree
+        CODE_BG = {"fill_color": "#F5F5F5", "stroke_color": "#CCCCCC", "stroke_width": 1}
+
         asp_code = Code(
             tab_width=2,
             code_string='''
@@ -145,10 +147,10 @@ pWin(t) :- termination(t), not possibleMove(t,o,_).
 oWin(t) :- not termination(t), not possibleMove(t,p,_).
 ''',
             language='asp',
-            formatter_style='one-dark',
-            add_line_numbers=True,
-            line_numbers_from=1,
-        ).scale(0.65)
+            formatter_style='default',
+            add_line_numbers=False,
+            background_config=CODE_BG,
+        ).scale(0.6)
         asp_code.next_to(tree_group, UP, buff=1.2).shift(LEFT*0.75)
         s.add(asp_code)
 

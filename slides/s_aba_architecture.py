@@ -13,7 +13,7 @@ from slides.shared.base_slide import BaseSlide
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
-SLIDE_NO = 1
+SLIDE_NO = 8
 
 WIDTH = 13
 BUFF = 1.5
@@ -75,6 +75,8 @@ class SAbaArchitecture(BaseSlide):
                        aspic_af_enc.get_left(), buff=0.1, color=BLACK)
 
         # Show files one by one
+        s.wait()
+        s.next_slide()
         s.play(FadeIn(abstract_af_enc), Create(arrow1))
         s.wait()
         s.next_slide()

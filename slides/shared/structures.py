@@ -37,7 +37,7 @@ class S4FStructure(VGroup):
 
     def __init__(
         self,
-        color=GREEN,
+        color=LIGHT_GRAY,
         rotation=-30,
         inner_opacity=1,
         outer_opacity=0.55,

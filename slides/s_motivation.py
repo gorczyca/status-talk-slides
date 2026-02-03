@@ -24,16 +24,14 @@ class SMotivation(BaseSlide):
     def create_content(self):
         s = self.slide
 
-        quote = MarkupText(
-            '<u>According to the NIH:</u>\n'
-            '<i>"[PCOS is diagnosed in the presence of] <b>Oligo ovulation</b>\n'
-            'and clinical and/or biological signs of <b>hyperandrogenism</b>,\n'
-            'and [assuming the] <b>exclusion of other aetiologies</b>"</i>',
-            font_size=20,
-            color=BLACK
-        )
-        quote.to_edge(LEFT, buff=1).shift(UP*1)
-        s.add(quote)
+        quote_lines = VGroup(
+            TexWrapper(r"\underline{According to the NIH:}", font_size=24, color=BLACK),
+            TexWrapper(r"\textit{[PCOS is diagnosed in the presence of] \textbf{Oligo ovulation}}", font_size=22, color=BLACK),
+            TexWrapper(r"\textit{and clinical and/or biological signs of \textbf{hyperandrogenism},}", font_size=22, color=BLACK),
+            TexWrapper(r"\textit{and [assuming the] \textbf{exclusion of other aetiologies}.}", font_size=22, color=BLACK),
+        ).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
+        quote_lines.to_edge(LEFT, buff=1).shift(UP*1)
+        s.add(quote_lines)
 
         s.wait()
         s.next_slide()
@@ -45,7 +43,7 @@ class SMotivation(BaseSlide):
         # Stack them vertically
         conditions = VGroup(oligo, hyper).arrange(
             DOWN, aligned_edge=LEFT, buff=0.15)
-        conditions.next_to(quote, DOWN, buff=0.8).to_edge(LEFT, buff=1.5)
+        conditions.next_to(quote_lines, DOWN, buff=0.8).to_edge(LEFT, buff=1.5)
 
         # Create brace and PCOS label
         brace = Brace(conditions, RIGHT, color=BLACK)
@@ -200,7 +198,7 @@ class SMotivation(BaseSlide):
         )
         graph_elements.scale(0.45).next_to(table, DOWN, buff=.5, aligned_edge=LEFT).shift(RIGHT)
 
-        s.play(FadeOut(quote), FadeOut(
+        s.play(FadeOut(quote_lines), FadeOut(
             VGroup(cross_line, other, oligo, hyper, brace, pcos)),
             FadeIn(VGroup(table, citation)))
         
