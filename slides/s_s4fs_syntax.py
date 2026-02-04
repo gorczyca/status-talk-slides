@@ -26,12 +26,13 @@ class SS4fsSyntax(BaseSlide):
 
         # === Language and definitions (left side) ===
         intro = TexWrapper(
-            r"Language $\mathcal{L}^{\preceq}_{\mathcal{S}}$:",
+            # r"Language $\mathcal{L}^{\preceq}_{\mathcal{S}}$:",
+            r"Language $\langss$:",
             font_size=FONT_SIZE_TEXT
         ).to_edge(LEFT, buff=1).shift(UP * 2)
 
         grammar = MathTexWrapper(
-            r"\varphi ::= s \preceq u \mid \psi \text{ where } \psi ::= p \mid \neg\psi \mid \psi_1 \land \psi_2 \mid \standbs \psi",
+            r"\varphi ::= \sts \preceq \stu \mid \psi \text{ where } \psi ::= p \mid \neg\psi \mid \psi_1 \land \psi_2 \mid \standbs \psi",
             font_size=FONT_SIZE_TEXT
         ).next_to(intro, DOWN, buff=0.3, aligned_edge=LEFT).shift(RIGHT * 0.2)
 
@@ -47,7 +48,7 @@ class SS4fsSyntax(BaseSlide):
 
         # Semantics at the bottom (standpoint modality and ordering)
         sem_order = MathTexWrapper(
-            r"\sffsstruct, \pi \modelfor s \preceq u \quad :\Longleftrightarrow \quad \sigma(s) \subseteq \sigma(u) \text{ and } \tau(s) \subseteq \tau(u)",
+            r"\sffsstruct, \pi \modelfor \sts \preceq \stu \quad :\Longleftrightarrow \quad \sigma(s) \subseteq \sigma(u) \text{ and } \tau(s) \subseteq \tau(u)",
             font_size=FONT_SIZE_TEXT
         ).to_edge(DOWN, buff=0.65).to_edge(LEFT, buff=1).shift(UP*.75)
 

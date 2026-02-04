@@ -295,8 +295,8 @@ class SAbaMotivation(BaseSlide):
                 # Show messages explicitly
         show_msg(msg1)
 
-        s.wait()
-        s.next_slide()
+        # s.wait()
+        # s.next_slide()
 
         # Step 1: Show first argument (P <- A, B, X) with rule box
         s.play(FadeIn(VGroup(p_node, p1_arg_box, p_node_1, a_node_1, b_node_1,  x_node_1,
@@ -306,36 +306,36 @@ class SAbaMotivation(BaseSlide):
 
         # Step 2: Show A supported by checkmark
         show_msg(msg2)
-        s.wait()
-        s.next_slide()
+        # s.wait()
+        # s.next_slide()
         s.play(FadeIn(VGroup(a1_arg_box, empty_a_1, edge_empty_a1)))
         s.wait()
         s.next_slide()
 
 
         show_msg(msg3)
-        s.wait()
-        s.next_slide()
-        s.play(FadeIn(VGroup(b1_arg_box, empty_b_1, edge_empty_b1)))
-        s.play(DrawBorderThenFill(p1_arg_box_full))
+        # s.wait()
+        # s.next_slide()
+        s.play(FadeIn(VGroup(b1_arg_box, empty_b_1, edge_empty_b1)), DrawBorderThenFill(p1_arg_box_full))
+        # s.play(DrawBorderThenFill(p1_arg_box_full))
         s.wait()
         s.next_slide()
 
 
 
         show_msg(msg4)
-        s.wait()
-        s.next_slide()
+        # s.wait()
+        # s.next_slide()
         s.play(FadeIn(VGroup(neg_x1_rule_box, neg_x_node, x_p_node, edge_xp_to_negx, edge_neg_x_attack)))
         s.wait()
         s.next_slide()
 
         show_msg(msg5)
-        s.wait()
-        s.next_slide()
-        s.play(FadeIn(VGroup(x_p_rule_box, empty_x_p, edge_empty_xp)))
+        # s.wait()
+        # s.next_slide()
+        s.play(FadeIn(VGroup(x_p_rule_box, empty_x_p, edge_empty_xp)),
         # Change first argument boxes to defeated (red)
-        s.play(
+        # s.play(
             DrawBorderThenFill(neg_x1_box_full),
             p1_arg_box[0].animate.set_fill(DEFEAT_COLOR, opacity=1),
             p1_arg_box_full[0].animate.set_fill(DEFEAT_COLOR, opacity=1),
@@ -347,8 +347,8 @@ class SAbaMotivation(BaseSlide):
 
         show_msg(msg6)
 
-        s.wait()
-        s.next_slide()
+        # s.wait()
+        # s.next_slide()
 
 
         s.play(FadeIn(VGroup(p2_arg_box, p_node_2, a_node_2, b_node_2, y_node_2,
@@ -360,8 +360,8 @@ class SAbaMotivation(BaseSlide):
         show_msg(msg7)
 
 
-        s.wait()
-        s.next_slide()
+        # s.wait()
+        # s.next_slide()
 
         s.play(FadeIn(VGroup(neg_y2_rule_box, neg_y_node, y_p_node, edge_yp_to_negy, edge_neg_y_attack)))
         s.wait()

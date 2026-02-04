@@ -201,44 +201,44 @@ class SAbaExamples(BaseSlide):
                                  a, s_node.get_left()+DOWN*0.1, color=BLACK),
                              fixed_arrow_graph(p, s_node.get_left(), color=BLACK)),
                       highlight_box(VGroup(s_node, d, p, a), fill_opacity=1, fill_color=PROP_COLOR, buff=0.1, dashed=True).set_z_index(3)))
-        s.next_slide()
+        # s.next_slide()
 
         # m_2, m_2_1: opponent attacks
         e_xd = highlight_box(VGroup(e, xd), fill_opacity=1,
                              fill_color=OPPONENT_COLOR, buff=0.1, dashed=False).set_z_index(0)
         s.play(FadeIn(VGroup(e, xd, fixed_arrow_graph(e, xd.get_left(
         ), color=BLACK), e_xd, fixed_arrow_graph(xd, d.get_left(), color=RED))))
-        s.next_slide()
+        # s.next_slide()
 
         t_b_xa = highlight_box(VGroup(t, b, xa), stroke_width=STROKE_WIDTH, fill_opacity=1,
-                               fill_color=OPPONENT_COLOR, dashed=True, buff=0.15).set_z_index(0)
+                               fill_color=OPPONENT_COLOR, dashed=True, buff=0.15).set_z_index(1)
         s.play(FadeIn(VGroup(t, b, xa, fixed_arrow_graph(b, xa.get_left()+UP*0.1, color=BLACK), fixed_arrow_graph(t,
                xa.get_left()+DOWN*0.1, color=BLACK), t_b_xa, fixed_arrow_graph(xa, a.get_left(), color=RED))))
-        s.next_slide()
+        # s.next_slide()
 
         # m_3: t <- c
         c_t = highlight_box(VGroup(c, t), stroke_width=STROKE_WIDTH, fill_opacity=1,
                             fill_color=OPPONENT_COLOR, dashed=True, buff=0.1).set_z_index(5)
         opp_arg = highlight_box(
-            VGroup(c_t, b, xa), buff=0.3, fill_color=OPPONENT_COLOR, dashed=False)
+            VGroup(c_t, b, xa), buff=0.3, fill_color=OPPONENT_COLOR, dashed=False).set_z_index(0)
         s.play(FadeIn(VGroup(c, fixed_arrow_graph(
             c, t.get_left(), color=BLACK), c_t, opp_arg)))
-        s.next_slide()
+        # s.next_slide()
 
         # m_4: proponent plays xe
         s.play(FadeIn(VGroup(xe, fixed_arrow_graph(xe, e.get_left(), color=RED))),
                 e_xd[0].animate.set_fill(DEFEAT_COLOR, opacity=1))
-        s.next_slide()
+        # s.next_slide()
 
         # # m_5: p <- xc
         xc_p = highlight_box(VGroup(xc, p), fill_opacity=1, fill_color=PROP_COLOR, buff=0.15, dashed=True).set_z_index(4)
         s.play(FadeIn(VGroup(xc, fixed_arrow_graph(xc, p.get_left(), color=BLACK), xc_p)))
         # s.play(FadeIn(xc_p))
         
-        s.next_slide()
+        # s.next_slide()
         s.play(FadeIn(curved_arrow(xc.get_bottom(), c.get_right() + 0.1*DOWN+0.2*RIGHT, bend=1, color=RED)), 
             c_t[0].animate.set_fill(DEFEAT_COLOR, opacity=1), t_b_xa[0].animate.set_fill(DEFEAT_COLOR, opacity=1), opp_arg[0].animate.set_fill(DEFEAT_COLOR, opacity=1))
-        s.next_slide()
+        # s.next_slide()
 
         # # m_6: xc <- f
         f_xc = highlight_box(VGroup(f, xc), fill_opacity=1, fill_color=PROP_COLOR, buff=0.1, dashed=True).set_z_index(5)

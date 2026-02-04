@@ -15,7 +15,7 @@ _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SLIDE_NO = 15
 
 
-class SS4fBeyond(BaseSlide):
+class SSs4fBeyond(BaseSlide):
     TITLE = r'Standpoint S4F: Beyond Simple Theories'
 
     def create_content(self):
@@ -114,12 +114,6 @@ class SS4fBeyond(BaseSlide):
             body_font_size=20
         ).next_to(standp_left, DOWN, buff=0.5, aligned_edge=LEFT)
 
-        # QBF translation (right side, all in blue)
-        qbf_title = TexWrapper(
-            r"QBF formula:",
-            font_size=24,
-            color=BRILLIANT_BLUE
-        ).to_corner(UR, buff=1).shift(DOWN * 1.5 + LEFT * 4)
 
         qbf_formula = MathTexWrapper(
             r"\Phi := \exists s_1,\ldots,s_m\forall p_1,\ldots,p_n\exists r_1,\ldots,r_l\Psi",
@@ -178,12 +172,12 @@ class SS4fBeyond(BaseSlide):
         s.next_slide()
 
         # 5. QBF translation details
-        s.add(qbf_title, qbf_formula, trans_formulas)
+        s.add(qbf_formula, trans_formulas)
         s.wait()
 
 
 
-class SS4fBeyondScene(Slide):
+class SSs4fBeyondScene(Slide):
     def construct(self):
-        SS4fBeyond(self, show_footer=True, slide_no=SLIDE_NO, slide_total=SLIDES_NO)
+        SSs4fBeyond(self, show_footer=True, slide_no=SLIDE_NO, slide_total=SLIDES_NO)
         self.wait()

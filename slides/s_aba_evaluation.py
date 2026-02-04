@@ -147,7 +147,8 @@ class SAbaEvaluation(BaseSlide):
 
         grid.shift(ax.c2p(0, 0) - grid.c2p(0, 0))  # pin origins together
 
-        s.play(Create(grid), Create(ax), Create(x_lbl), Create(y_lbl))
+        # s.play(Create(grid), Create(ax), Create(x_lbl), Create(y_lbl))
+        s.add(grid, ax, x_lbl, y_lbl)
         s.wait()
         s.next_slide()
 

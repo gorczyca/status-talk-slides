@@ -2,7 +2,7 @@ from slides.shared.slide_count import SLIDES, SLIDES_NO
 from slides.shared.file_icon import FileIcon
 from slides.shared.block_diagram import BlockDiagram
 from slides.shared.colors import D_BLUE, LAT_ORANGE
-from slides.shared.wrappers import MathTexWrapper, TextWrapper
+from slides.shared.wrappers import MathTexWrapper, TextWrapper, TexWrapper
 from pathlib import Path
 
 from manim import *
@@ -127,13 +127,21 @@ class SAbaArchitecture(BaseSlide):
         s.wait()
         s.next_slide()
 
+        # Footnote (single line, no marker object)
+        footnote_text = TexWrapper(
+            r"\makebox[30cm][l]{\small $^{1}$ Susana Hahn, Orkunt Sabuncu, Torsten Schaub, Tobias Stolzmann. \textit{Clingraph: A System for ASP-based Visualization.} TPLP (2024).}",
+            font_size=14
+        ).to_edge(DOWN, buff=0.2).to_edge(LEFT, buff=0.4).shift(UP*.5)
+        # s.add(footnote_text)
+
+
         # Create three ASP file icons
         abstract_vis = FileIcon(".ASP", accent_color=LAT_ORANGE, scale=ICON_SCALE,
-                                title="Visualisation (Clingraph)", caption="(16-35 lines of ASP)").next_to(dots1, RIGHT, buff=H_BUFF)
-        aba_vis = FileIcon(".ASP", accent_color=LAT_ORANGE, scale=ICON_SCALE, title="Visualisation (Clingraph)",
+                                title="Visualisation (Clingraph$^1$)", caption="(16-35 lines of ASP)").next_to(dots1, RIGHT, buff=H_BUFF)
+        aba_vis = FileIcon(".ASP", accent_color=LAT_ORANGE, scale=ICON_SCALE, title="Visualisation (Clingraph$^1$)",
                            caption="(40-84 lines of ASP)").next_to(aba_stable_sem, RIGHT, buff=H_BUFF)
         aspic_vis = FileIcon(".ASP", accent_color=LAT_ORANGE, scale=ICON_SCALE,
-                             title="Visualisation (Clingraph)", caption="(49 lines of ASP)").next_to(dots3, RIGHT, buff=H_BUFF)
+                             title="Visualisation (Clingraph$^1$)", caption="(49 lines of ASP)").next_to(dots3, RIGHT, buff=H_BUFF)
 
         # Add visualization images from ms-dis-vis
         IMG_SCALE = 0.4
@@ -161,7 +169,8 @@ class SAbaArchitecture(BaseSlide):
         # Show images one by one
         s.play(FadeIn(af_img), FadeIn(abstract_vis), Create(arrow_to_af_img),
                FadeIn(aba_img), FadeIn(aba_vis), Create(arrow_to_aba_img),
-               FadeIn(aspic_img), FadeIn(aspic_vis), Create(arrow_to_aspic_img)
+               FadeIn(aspic_img), FadeIn(aspic_vis), Create(arrow_to_aspic_img),
+                FadeIn(footnote_text)
         )
 
         s.wait()
@@ -175,6 +184,7 @@ class SAbaArchitecture(BaseSlide):
                                  title="Interactive").next_to(control_file, DOWN, buff=V_BUFF*0.5)
 
         s.play(FadeIn(py_file_above), FadeIn(py_file_below))
+
 
 
 class SAbaArchitectureScene(Slide):

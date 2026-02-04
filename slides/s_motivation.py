@@ -243,7 +243,7 @@ class SMotivation(BaseSlide):
         )
 
     class SMotivationScene(Slide):
-    def construct(self):
-        SMotivation(self, show_footer=True,
-                    slide_no=SLIDE_NO, slide_total=SLIDES_NO)
-        self.wait()
+        def construct(self):
+            SMotivation(self, show_footer=True,
+                        slide_no=SLIDE_NO, slide_total=SLIDES_NO)
+            self.wait()

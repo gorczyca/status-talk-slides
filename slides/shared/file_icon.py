@@ -1,6 +1,6 @@
 from manim import *
 
-from slides.shared.wrappers import TextWrapper
+from slides.shared.wrappers import TextWrapper, TexWrapper
 
 
 class FileIcon(VGroup):
@@ -89,11 +89,11 @@ class FileIcon(VGroup):
         ).move_to(body.get_center())
 
         # Extension text (white on the accent bar)
-        ext_text = Text(
+        # Use TeX for extension to match slide typography
+        ext_text = TexWrapper(
             extension,
             font_size=font_size,
             color=WHITE,
-            weight=BOLD,
         ).move_to(accent_bar.get_center())
 
         # Scale text to fit in bar if needed
@@ -115,7 +115,7 @@ class FileIcon(VGroup):
 
         # Add title above the icon if provided
         if title is not None:
-            self.title_text = TextWrapper(
+            self.title_text = TexWrapper(
                 title,
                 font_size=title_font_size,
                 color=title_color,
@@ -124,7 +124,7 @@ class FileIcon(VGroup):
 
         # Add caption below the icon if provided
         if caption is not None:
-            self.caption_text = TextWrapper(
+            self.caption_text = TexWrapper(
                 caption,
                 font_size=caption_font_size,
                 color=caption_color,
@@ -141,7 +141,7 @@ class FileIcon(VGroup):
         """Set or update the title text above the icon."""
         if self.title_text is not None:
             self.remove(self.title_text)
-        self.title_text = TextWrapper(
+        self.title_text = TexWrapper(
             text,
             font_size=self.BASE_TITLE_FONT_SIZE * self._scale,
             color=color if color is not None else self._title_color,
@@ -153,7 +153,7 @@ class FileIcon(VGroup):
         """Set or update the caption text below the icon."""
         if self.caption_text is not None:
             self.remove(self.caption_text)
-        self.caption_text = TextWrapper(
+        self.caption_text = TexWrapper(
             text,
             font_size=self.BASE_CAPTION_FONT_SIZE * self._scale,
             color=color if color is not None else self._caption_color,

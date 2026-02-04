@@ -35,13 +35,13 @@ class SS4fBackgroundLogics(BaseSlide):
 
         # Add captions above each structure
         standpoint_caption = TexWrapper(
-            r'\textbf{Standpoint Logic}',
+            r'\textbf{Standpoint Logic}\\ {[Gómez Álvarez \& Sebastian Rudolph, 2021]}',
             font_size=28,
             color=BLACK
         ).next_to(standpoint_struct, UP, buff=0.5)
 
         s4f_caption = TexWrapper(
-            r'\textbf{Modal Logic S4F}',
+            r'\textbf{Modal Logic S4F}\\ {[Segerberg, 1971]}',
             font_size=28,
             color=BLACK
         ).next_to(s4f_struct, UP, buff=0.5)

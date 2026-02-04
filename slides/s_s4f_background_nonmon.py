@@ -96,6 +96,7 @@ class SS4fBackgroundNonmon(BaseSlide):
         algo_title_font = 24
         algo_formula_font = 20
 
+        citation = TexWrapper(r"[Schwarz \& Truszczynski, 1993]", font_size=algo_title_font)
         algo_step1 = TexWrapper(
             r"Represent $\sffstruct$ by a partition $(\Phi,\Psi)$ of $\{\know\phi \mid \know\phi \in \mathit{Subf}(T)\}$.",
             font_size=algo_title_font
@@ -105,7 +106,7 @@ class SS4fBackgroundNonmon(BaseSlide):
             font_size=algo_formula_font,
             color=BRILLIANT_BLUE
         )
-        algo_intro_block = VGroup(algo_step1, algo_step2).arrange(DOWN, buff=0.2, aligned_edge=LEFT)
+        algo_intro_block = VGroup(citation, algo_step1, algo_step2).arrange(DOWN, buff=0.2, aligned_edge=LEFT)
         algo_step2.shift(RIGHT * 0.5)
 
         algo_check_header = TexWrapper(
@@ -164,7 +165,7 @@ class SS4fBackgroundNonmon(BaseSlide):
             r"``\textsc{Does $T\subseteq \langk$ have a minimal model}?'' is $\Sigma^P_2$-complete.",
             color=BRILLIANT_BLUE,
             body_font_size=20
-        ).to_corner(DR, buff=0.5).shift(UP*1)
+        ).to_corner(DR, buff=0.5).shift(UP*.5)
 
         # 1. Structures + relation
         s.add(s4f_left, s4f_right, pref_symbol)

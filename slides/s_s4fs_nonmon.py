@@ -131,7 +131,7 @@ class SS4fsNonmon(BaseSlide):
         ).next_to(minimal_label, DOWN, buff=0.25, aligned_edge=LEFT)
 
         adapt_text = TexWrapper(
-            r"then adapt the [Schwarz \& Truszczynski (1993)] procedure.",
+            r"then adapt the Schwarz \& Truszczynski (1993) procedure.",
             font_size=24
         ).next_to(partition_text, DOWN, buff=0.1, aligned_edge=LEFT)
 
@@ -206,12 +206,12 @@ class SS4fsNonmon(BaseSlide):
 
         # reveal header then bullets
         s.add(add_title)
-        s.wait()
-        s.next_slide()
+        # s.wait()
+        # s.next_slide()
         for item in add_items:
-            s.add(item)
             s.wait()
             s.next_slide()
+            s.add(item)
 
 
 class SS4fsNonmonScene(Slide):

@@ -15,7 +15,7 @@ _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SLIDE_NO = 14
 
 
-class SS4fNonmon(BaseSlide):
+class SSs4fNonmon(BaseSlide):
     TITLE = r'Standpoint S4F: Non-Monotonicity'
 
     def create_content(self):
@@ -121,7 +121,7 @@ class SS4fNonmon(BaseSlide):
         ).next_to(standp, DOWN, buff=.25, aligned_edge=LEFT)
 
         minimal_model_desc = TexWrapper(
-            r"\parbox{8.5cm}{\raggedright ``Freeze'' arbitrary structure + precisification-wise S4F minimization (Schwarz \& Truszczyński, 1993).}",
+            r"\parbox{9.5cm}{\raggedright Assert the local S4F theory $T_{\pr}$ at each $\pr$ such that $T_{\pr}\subseteq \set{\varphi \guard \standbs \varphi \in T, \pr\in\stan(\sts)} $  {(due to simple theories and small model property),} then apply the Schwarz \& Truszczyński (1993) procedure.}",
             font_size=24
         ).next_to(minimal_model_title, DOWN, buff=0.2, aligned_edge=LEFT)
 
@@ -130,7 +130,7 @@ class SS4fNonmon(BaseSlide):
             r"``\textsc{Does a simple $\mathbb{S}$S4F theory $T$ have a minimal model}?'' is $\Sigma^P_2$-complete.",
             color=BRILLIANT_BLUE,
             body_font_size=20
-        ).next_to(minimal_model_desc, DOWN, buff=0.5, aligned_edge=LEFT)
+        ).next_to(minimal_model_desc, DOWN, buff=0.25, aligned_edge=LEFT)
 
         # 3. Minimal model explanation
         s.add(minimal_model_title, minimal_model_desc)
@@ -148,7 +148,7 @@ class SS4fNonmon(BaseSlide):
 
 
 
-class SS4fNonmonScene(Slide):
+class SSs4fNonmonScene(Slide):
     def construct(self):
-        SS4fNonmon(self, show_footer=True, slide_no=SLIDE_NO, slide_total=SLIDES_NO)
+        SSs4fNonmon(self, show_footer=True, slide_no=SLIDE_NO, slide_total=SLIDES_NO)
         self.wait()

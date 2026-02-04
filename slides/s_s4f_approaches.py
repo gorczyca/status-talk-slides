@@ -15,7 +15,7 @@ _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SLIDE_NO = 12
 
 
-class SS4FApproaches(BaseSlide):
+class SS4fApproaches(BaseSlide):
     TITLE = r'S4F and Standpoint Logic: Product and Fusion'
 
     def create_content(self):
@@ -146,7 +146,7 @@ class SS4FApproaches(BaseSlide):
             FadeIn(s2_outer_worlds),
         )
 
-        s4f_standp_label = TexWrapper(r'\textit{S4F Standpoint}', font_size=FONT_SIZE_TEXT).next_to(s4f_standp, DOWN, buff=0.3)
+        s4f_standp_label = TexWrapper(r'\textit{S4F Standpoint Logic}', font_size=FONT_SIZE_TEXT).next_to(s4f_standp, DOWN, buff=0.3)
         s.add(s4f_standp_label)
 
         # s.wait()
@@ -199,8 +199,8 @@ class SS4FApproaches(BaseSlide):
         # s.next_slide()
 
 
-class SS4FApproachesScene(Slide):
+class SS4fApproachesScene(Slide):
     def construct(self):
-        SS4FApproaches(self, show_footer=True,
+        SS4fApproaches(self, show_footer=True,
                        slide_no=SLIDE_NO, slide_total=SLIDES_NO)
         self.wait()
