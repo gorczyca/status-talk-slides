@@ -32,4 +32,4 @@ SLIDES = [
 ]
 
 # SLIDES_NO = len(SLIDES)
-SLIDES_NO = 99
+SLIDES_NO = 19

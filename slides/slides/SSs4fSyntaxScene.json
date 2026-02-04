@@ -1,0 +1,69 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SSs4fSyntaxScene/e51467d6c7761fcdbdb6694f6ed94bc767d789e2aeb52bc53cb45d4f23c1d4e7.mp4",
+      "rev_file": "slides/files/SSs4fSyntaxScene/e51467d6c7761fcdbdb6694f6ed94bc767d789e2aeb52bc53cb45d4f23c1d4e7_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SSs4fSyntaxScene/67e2756276e4c61ec6a96e828ff9fbafc500febacecc711e450bd8239168b681.mp4",
+      "rev_file": "slides/files/SSs4fSyntaxScene/67e2756276e4c61ec6a96e828ff9fbafc500febacecc711e450bd8239168b681_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SSs4fSyntaxScene/72016e92316f1455cfde9cb4b88ece8557b6d203a1f7d12c8bc9b4e11cf25482.mp4",
+      "rev_file": "slides/files/SSs4fSyntaxScene/72016e92316f1455cfde9cb4b88ece8557b6d203a1f7d12c8bc9b4e11cf25482_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SSs4fSyntaxScene/4407b7fd289af71667c9bb93400ee513ca31a7b220a4abcbb03ffb83ffa7ba04.mp4",
+      "rev_file": "slides/files/SSs4fSyntaxScene/4407b7fd289af71667c9bb93400ee513ca31a7b220a4abcbb03ffb83ffa7ba04_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/SSs4fSyntaxScene/3a7548156c24884d4a5500d717e3880bcf1382c168331c7b2e648e47240858be.mp4",
+      "rev_file": "slides/files/SSs4fSyntaxScene/3a7548156c24884d4a5500d717e3880bcf1382c168331c7b2e648e47240858be_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    854,
+    480
+  ],
+  "background_color": "white"
+}

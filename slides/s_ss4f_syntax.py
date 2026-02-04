@@ -13,10 +13,10 @@ from slides.shared.slide_count import SLIDES, SLIDES_NO
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-SLIDE_NO = 1
+SLIDE_NO = 13
 
 
-class SS4fSyntax(BaseSlide):
+class SSs4fSyntax(BaseSlide):
     TITLE = r'Standpoint S4F: Syntax \& Semantics'
 
     def create_content(self):
@@ -61,17 +61,6 @@ class SS4fSyntax(BaseSlide):
             font_size=FONT_SIZE_TEXT
         ).next_to(lang_title, DOWN, buff=0.2, aligned_edge=LEFT).shift(RIGHT * 0.2)
 
-        # LSK language definition
-        # lsk_title = TexWrapper(
-            # r"$\mathcal{L}_{SK}$ built via:",
-            # font_size=FONT_SIZE_TEXT
-        # ).next_to(lang_grammar, DOWN, buff=0.5, aligned_edge=LEFT)
-
-        # lsk_grammar = MathTexWrapper(
-            # r"\varphi ::= \psi \mid \neg\varphi \mid \varphi \land \varphi \mid \square_s\varphi",
-            # font_size=FONT_SIZE_TEXT
-        # ).next_to(lsk_title, DOWN, buff=0.2, aligned_edge=LEFT)
-
         # Simple theory definition
         simple_title = TexWrapper(
             r"An $\mathbb{S}$S4F \textbf{simple} theory $T$:",
@@ -79,7 +68,7 @@ class SS4fSyntax(BaseSlide):
         ).next_to(lang_grammar, DOWN, buff=0.5, aligned_edge=LEFT).shift(LEFT * 0.2)
 
         simple_condition = TexWrapper(
-            r"Each $\varphi\in T$ is of the form $\varphi = \square_s\psi$ with $\psi \in \langk$.",
+            r"Each $\varphi\in T$ is of the form $\varphi = \standbs \psi$ with $\psi \in \langk$.",
             font_size=FONT_SIZE_TEXT
         ).next_to(simple_title, DOWN, buff=0.2, aligned_edge=LEFT).shift(RIGHT * 0.2)
 
@@ -91,7 +80,7 @@ class SS4fSyntax(BaseSlide):
 
         # Default rule with standpoint modalities - structured for matching
         default_rule_with_modalities = MathTexWrapper(
-            r"\square_s", r"\left[", r"\default{\phi}{\psi'}{\psi}", r"\right]", r"\leadsto", r"\square_s", r"\left[", r"(", r"\know", r"\phi", r"\land", r"\know", r"\neg", r"\know", r"\neg", r"\psi'", r")", r"\limplies", r"\know", r"\psi", r"\right]",
+            r"\standbs", r"\left[", r"\default{\phi}{\psi'}{\psi}", r"\right]", r"\leadsto", r"\standbs", r"\left[", r"(", r"\know", r"\phi", r"\land", r"\know", r"\neg", r"\know", r"\neg", r"\psi'", r")", r"\limplies", r"\know", r"\psi", r"\right]",
             font_size=FONT_SIZE_TEXT
         ).next_to(simple_condition, DOWN, buff=0.5, aligned_edge=LEFT)
 
@@ -104,7 +93,7 @@ class SS4fSyntax(BaseSlide):
 
         # Box modality semantics
         sem_box = MathTexWrapper(
-            r"\sffstructS, \pi, w \modelfor \square_s\varphi \quad :\Longleftrightarrow \quad \sffstructS, \pi', w' \modelfor \varphi \text{ for all } \pi' \in \sigma(s) \text{ and } w' \in \zeta_o(\pi') \cup \zeta_i(\pi')",
+            r"\sffstructS, \pi, w \modelfor \standbs\varphi \quad :\Longleftrightarrow \quad \sffstructS, \pi', w' \modelfor \varphi \text{ for all } \pi' \in \sigma(s) \text{ and } w' \in \zeta_o(\pi') \cup \zeta_i(\pi')",
             font_size=FONT_SIZE_TEXT
         ).next_to(sem_k, UP, buff=0.3, aligned_edge=LEFT)
 
@@ -138,7 +127,7 @@ class SS4fSyntax(BaseSlide):
 
 
 
-class SS4fSyntaxScene(Slide):
+class SSs4fSyntaxScene(Slide):
     def construct(self):
-        SS4fSyntax(self, show_footer=True, slide_no=SLIDE_NO, slide_total=SLIDES_NO)
+        SSs4fSyntax(self, show_footer=True, slide_no=SLIDE_NO, slide_total=SLIDES_NO)
         self.wait()

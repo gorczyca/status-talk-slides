@@ -41,7 +41,7 @@ class SS4fBeyond(BaseSlide):
 
         # Syntax formula
         syn_grammar = MathTexWrapper(
-            r"\varphi ::= a \mid \neg\varphi \mid \varphi \land \varphi \mid \know\varphi \mid \square_s\varphi",
+            r"\varphi ::= a \mid \neg\varphi \mid \varphi \land \varphi \mid \know\varphi \mid \standbs\varphi",
             font_size=24
         ).next_to(unrest_syn_title, DOWN, buff=0.3, aligned_edge=LEFT).shift(RIGHT * 0.3)
 
@@ -149,10 +149,17 @@ class SS4fBeyond(BaseSlide):
         ).next_to(qbf_formula, DOWN, buff=0.3, aligned_edge=LEFT)
 
         # Add all elements
-        # Left side: problem → syntax → structures → result
+        # 1. Problem statement
         s.add(problem_title, problem_formula)
-        s.add(unrest_syn_title)
-        s.add(syn_grammar)
+        s.wait()
+        s.next_slide()
+
+        # 2. Unrestricted syntax
+        s.add(unrest_syn_title, syn_grammar)
+        s.wait()
+        s.next_slide()
+
+        # 3. Standpoint structures with nested S4F components
         s.add(standp_left.s1, standp_left.s1_label)
         s.add(standp_left.s2, standp_left.s2_label)
         for mini_s4f in mini_s4fs_left:
@@ -162,9 +169,16 @@ class SS4fBeyond(BaseSlide):
         for mini_s4f in mini_s4fs_right:
             s.add(mini_s4f)
         s.add(pref_symbol)
+        s.wait()
+        s.next_slide()
+
+        # 4. Hardness result
         s.add(hardness_result)
-        # Right side: QBF translation
-        s.add(qbf_formula, trans_formulas)
+        s.wait()
+        s.next_slide()
+
+        # 5. QBF translation details
+        s.add(qbf_title, qbf_formula, trans_formulas)
         s.wait()
 
 

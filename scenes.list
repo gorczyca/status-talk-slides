@@ -19,3 +19,6 @@ slides/s_ss4f_syntax.py SS4fSyntaxScene # 13
 slides/s_ss4f_nonmon.py SS4fNonmonScene # 14
 slides/s_ss4f_beyond.py SS4fBeyondScene # 15
 slides/s_chapter_2b.py SChapter2bScene 
+slides/s_s4fs_syntax.py SS4fsSyntaxScene # 16
+slides/s_s4fs_nonmon.py SS4fNonmonScene # 17
+slides/summary.py SummaryScene # 18

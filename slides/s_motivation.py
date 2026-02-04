@@ -223,15 +223,13 @@ class SMotivation(BaseSlide):
         s.add(formula_1_s, formula_2_s, formula_3_s, a_c)
 
         brace_5 = Brace(group_1, direction=RIGHT, buff=0.2, color=BLACK)
-        brace_5_conclusion = MathTexWrapper(r'\models', r'\big\{', r'\standb{\srot}\atomp,', r'\standb{\saes}\atomp',   r'\big\}', font_size=defaults_font_size)
+        # brace_5_conclusion = MathTexWrapper(r'\models', r'\big\{', r'\standb{\srot}\atomp,', r'\standb{\saes}\atomp',   r'\big\}', font_size=defaults_font_size)
+        brace_5_conclusion = MathTexWrapper(r'?', font_size=defaults_font_size)
         brace_6_conclusion = brace_5_conclusion.copy()
         brace_5.put_at_tip(brace_5_conclusion)
         s.wait()
         s.next_slide()
-        s.play(GrowFromCenter(brace_5))
-        s.wait()
-        s.next_slide()
-        s.play(FadeIn(brace_5_conclusion))
+        s.play(GrowFromCenter(brace_5), FadeIn(brace_5_conclusion))
 
         group_1.add(neg_y)
         brace_6 = Brace(group_1, direction=RIGHT, buff=0.2, color=BLACK)
@@ -244,13 +242,7 @@ class SMotivation(BaseSlide):
             Transform(brace_5_conclusion, brace_6_conclusion)
         )
 
-        saes_cross = Cross(brace_5_conclusion[3], color=RED, stroke_width=3).scale(1.05)
-        s.wait()
-        s.next_slide()
-        s.play(FadeIn(saes_cross))
-
-
-class SMotivationScene(Slide):
+    class SMotivationScene(Slide):
     def construct(self):
         SMotivation(self, show_footer=True,
                     slide_no=SLIDE_NO, slide_total=SLIDES_NO)
